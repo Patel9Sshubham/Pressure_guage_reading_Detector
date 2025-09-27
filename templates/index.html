@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gauge Reader</title>
+</head>
+<body>
+  <h2>Upload Gauge Image</h2>
+
+  <!-- Flash messages -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for msg in messages %}
+          <li>{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <!-- Upload Form -->
+  <form method="post" enctype="multipart/form-data">
+    <label>Image: <input type="file" name="image" accept="image/*" required></label><br><br>
+    <label>Reporting ID: <input type="text" name="reporting_id" required></label><br><br>
+    <button type="submit">Predict & Save</button>
+  </form>
+
+  <hr>
+
+  <!-- Show Last Prediction -->
+  {% if last_entry %}
+    <div style="margin-top:20px;">
+      <h3>Last Prediction:</h3>
+      <p><b>Filename:</b> {{ last_entry.filename }}</p>
+      <p><b>Predicted Reading:</b> {{ last_entry.reading }}</p>
+      <p><b>Reporting ID:</b> {{ last_entry.reporting_id }}</p>
+
+      <!-- Correction Form -->
+      <form action="{{ url_for('correct') }}" method="post" style="margin-top:15px;">
+        <input type="hidden" name="reporting_id" value="{{ last_entry.reporting_id }}">
+        <label for="correct_reading">Correct Reading:</label>
+        <input type="text" name="correct_reading" required>
+        <button type="submit">Replace Reading</button>
+      </form>
+    </div>
+  {% endif %}
+
+</body>
+</html>

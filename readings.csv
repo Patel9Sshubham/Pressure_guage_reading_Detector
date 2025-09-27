@@ -1,0 +1,65 @@
+id,filename,reading,correct_reading,reporting_id
+1,img1.jpg,80.0,,
+2,img2.jpg,0.0,,
+3,img3.jpg,0.0,,
+4,img4.jpg,50.0,,
+5,img5.jpg,156.0,,
+6,img7.jpg,95.0,,
+7,img8.jpg,20.0,,
+8,image (1).jpeg,160.0,,
+9,image (2).jpeg,100.0,,
+10,image (3).jpeg,100.0,,
+11,image (4).jpeg,100.0,,
+12,image (5).jpeg,100.0,,
+13,image (6).jpeg,4.0,,
+14,image (7).jpeg,2.0,,
+15,image (8).jpeg,100.0,,
+16,image (9).jpeg,85.0,,
+17,image (10).jpeg,160.0,,
+18,image (12).jpeg,160.0,,
+19,image (14).jpeg,146.0,,
+20,image (23).jpeg,1.0,,
+21,image (24).jpeg,33.0,,
+22,image (26).jpeg,83.0,,
+23,image (29).jpeg,58.0,,
+24,image (30).jpeg,0.0,,
+25,image (31).jpeg,30.0,,
+26,image (32).jpeg,58.0,,
+27,image (33).jpeg,100.0,,
+28,image (34).jpeg,56.0,,
+29,image (35).jpeg,85.0,,
+30,image (36).jpeg,0.0,,
+31,image (37).jpeg,100.0,,
+32,image (42).jpeg,1.0,,
+33,image (43).jpeg,1.0,,
+34,image (44).jpeg,30.0,,
+35,image (45).jpeg,10.0,,
+36,image (46).jpeg,50.0,,
+37,image (48).jpeg,70.0,,
+38,image (58).jpeg,2.0,,
+39,image (59).jpeg,30.0,,
+40,image (61).jpeg,144.0,,
+41,image (62).jpeg,160.0,,
+42,image (64).jpeg,88.0,,
+43,image (71).jpeg,3.0,,
+44,image (73).jpeg,87.0,,
+45,image (74).jpeg,143.0,,
+46,image (59).jpeg,100.0,,
+47,download.jpg,100.0,,
+48,download.jpg,79.0743637084961,150.0,111.0
+49,download.jpg,79.0743637084961,79.0743637084961,111.0
+50,download.jpg,79.0743637084961,887.0,111.0
+51,download.jpg,78.0,,98.0
+52,download.jpg,100.0,,98.0
+53,img4.jpg,103.92,,11.0
+54,image (4).jpeg,53.71168899536133,,69.0
+55,image_8_1758953322855.jpeg,93.95486450195312,,90.0
+56,image_4_1758953389436.jpeg,106.20323181152344,,45.0
+57,image_8_1758971459933.jpeg,93.95486450195312,,59.0
+58,image_8_1758972226481.jpeg,93.95486450195312,,59.0
+59,image_8_1758972230294.jpeg,93.95486450195312,,59.0
+60,image_4_1758972275957.jpeg,106.20323181152344,,66.0
+61,image_2_1758973203299.jpeg,86.615234375,,1.0
+62,img4_1758973314767.jpg,126.54882049560548,,2.0
+63,image_6_1758974174722.jpeg,103.5231704711914,,4.0
+64,image_8_1758974273424.jpeg,35.0,,5.0

@@ -1,0 +1,8 @@
+Flask==2.3.2
+gunicorn==21.2.0
+numpy
+pandas
+opencv-python-headless
+Pillow
+requests
+tensorflow-cpu==2.13.0   # or 'tensorflow' if you need GPU and large RAM

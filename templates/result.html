@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gauge Reader - Result</title>
+</head>
+<body>
+  <h2>Prediction Result</h2>
+
+  <!-- Flash messages -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for msg in messages %}
+          <li>{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <p><b>ID:</b> {{ id }}</p>
+  <p><b>Filename:</b> {{ filename }}</p>
+  <p><b>Predicted Reading:</b> {{ predicted }}</p>
+  <p><b>Final Stored Reading:</b> {{ final_reading }}</p>
+  <p><b>Reporting ID:</b> {{ reporting_id }}</p>
+
+  <!-- Correction Form (right beside Back) -->
+  <form action="{{ url_for('correct') }}" method="post" style="margin-top:15px;">
+    <input type="hidden" name="reporting_id" value="{{ reporting_id }}">
+    <label for="correct_reading">Correct Reading:</label>
+    <input type="text" name="correct_reading" required>
+    <button type="submit">Replace Reading</button>
+  </form>
+
+  <br>
+  <a href="{{ url_for('index') }}"><button>⬅ Back</button></a>
+</body>
+</html>
