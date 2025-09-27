@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 import cv2
 import tensorflow as tf
+from train_model import train_gauge_model  # import your training function
 
 # ---------------- CONFIG ----------------
 UPLOAD_FOLDER = "uploads"
@@ -14,7 +15,6 @@ MODEL_FILE = "gauge_reader_model.h5"
 IMG_SIZE = 128
 ALLOWED_EXT = {"png", "jpg", "jpeg"}
 MAX_CONTENT_LENGTH = 6 * 1024 * 1024   # 6 MB max upload
-
 MODEL_URL = os.getenv("MODEL_URL")  # Optional: download model from remote
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -72,6 +72,7 @@ def append_row(filename, reading, reporting_id):
     return next_id
 
 
+# ---------------- ROUTES ----------------
 @app.route("/", methods=["GET", "POST"])
 def index():
     last_entry = None
@@ -170,5 +171,19 @@ def correct():
     return redirect(url_for("index"))
 
 
+# ✅ Training Route
+@app.route("/train", methods=["GET", "POST"])
+def train():
+    if request.method == "POST":
+        try:
+            msg = train_gauge_model()  # call your training function
+            flash(msg)
+        except Exception as e:
+            flash(f"❌ Training failed: {e}")
+        return redirect(url_for("train"))
+    return render_template("train.html")
+
+
+# ---------------- MAIN ----------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
